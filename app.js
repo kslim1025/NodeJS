@@ -8,8 +8,8 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 //내가 만든 모듈
-var moduleA = require('./moduleA');
-var process = require('./process');
+var moduleA = require('./module/moduleA');
+var process = require('./module/process');
 var rint = require('./module/EmitterEvent');
 
 //모듈을 추출합니다.
