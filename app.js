@@ -15,9 +15,10 @@ var process = require('./process');
 var url = require('url');
 //쿼리 스트링을 문자열로 반환하기
 var queryString = require('querystring');
+
+var util = require('util');
 //모듈을 사용합니다.
 var parseObject = url.parse('https://hanbit.co.kr/store/books/look.php?p_code=B4250257160');
-
 
 var app = express();
 
@@ -57,5 +58,8 @@ console.log('process time = %d', process.processA(moduleA.abs(-273),0));
 
 console.log(parseObject);
 console.log(queryString.parse(parseObject.query));
+
+var data = util.format('%d + %d = %d',25,252,25+252);
+console.log(data);
 
 module.exports = app;
