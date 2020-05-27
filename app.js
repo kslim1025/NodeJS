@@ -6,6 +6,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var moduleA = require('./moduleA');
 
 var app = express();
 
@@ -37,5 +38,8 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+console.log('abs(-273) = %d ', moduleA.abs(-273));
+console.log('circleArea(3) = %d', moduleA.circleArea());
 
 module.exports = app;
