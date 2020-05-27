@@ -7,7 +7,7 @@ console.log('About to exit code: ', code);
 });
 
 
-// process.on('exit', function(code){
+ process.on('exit', function(code){
 console.log("안녕히 가세요.");
 });
 
