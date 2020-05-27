@@ -192,7 +192,7 @@ standard --fix
 apm install linter
 apm install inter-js-standard
 바벨이란?
-자바스크립트 표준 규격은 차근차근 제정되어왔고, 이러한 규격에는 개별 효율을 훨씬 높여주는 다양한 구문들이 있습니다. 하지만 그러한 것들을 사용하고 싶어도 제안된 것들을 실제 웹브라우저에서 사용할 수 있게 되기까지는 시간이 걸립니다. 또한 웹브라우저에 추가되더라도 테스트를 마치고 공식적인 발표가 있을때 까지는 많은 시간이 걸립니다. 게다가 해당 버전을 사용자에게 보급될때까지는 더 많은 시간을 요구합니다. 그래서 등장한 것이 바벨입니다. 바벨은 자바스크립트를 위한 다목적 컴파일러입니다. 바벨을 사용하면 다음세대의 자바스크립트로 작성된 코드를 현재 일반적으로 사용되는 자바스크립트로 변환 할 수 있습니다. 따라서 최신 표준의 소스코드를 이전 표준의 코드로 변환해주는 도구라고 할 ㅜ있습니다. 이러한 것을 “트랜스파일러”라고 합니다.
+자바스크립트 표준 규격은 차근차근 제정되어왔고, 이러한 규격에는 개별 효율을 훨씬 높여주는 다양한 구문들이 있습니다. 하지만 그러한 것들을 사용하고 싶어도 제안된 것들을 실제 웹브라우저에서 사용할 수 있게 되기까지는 시간이 걸립니다. 또한 웹브라우저에 추가되더라도 테스트를 마치고 공식적인 발표가 있을때 까지는 많은 시간이 걸립니다. 게다가 해당 버전을 사용자에게 보급될때까지는 더 많은 시간을 요구합니다. 그래서 등장한 것이 바벨입니다. 바벨은 자바스크립트를 위한 다목적 컴파일러입니다. 바벨을 사용하면 다음세대의 자바스크립트로 작성된 코드를 현재 일반적으로 사용되는 자바스크립트로 변환 할 수 있습니다. 따라서 최신 표준의 소스코드를 이전 표준의 코드로 변환해주는 도구라고 할 수 있습니다. 이러한 것을 “트랜스파일러”라고 합니다.
 바벨 설치
 npm install --global babel-cli babel-preset-es2015
 바벨 전용 설정 파일 만들기
@@ -280,9 +280,7 @@ $ npm run watch
 
 
 
-비동기 처리
-동기 처리
-설명
+비동기 처리 & 동기 처리설명
 fs.readFile()
 fs.readFileSync()
 파일을 읽습니다.
@@ -398,7 +396,10 @@ SMAm =  Pm +Pm-1 + Pm-2 + Pm-3...Pm-nn
 Opencv4nodejs 설치방법 
 
 설치할때 무조건 cmake랑 visual studio 작업이 진행되어 있어야됨
-참고: https://www.youtube.com/watch?reload=9&v=0hZoN4m7hP8
+
+참고: 
+
+https://www.youtube.com/watch?reload=9&v=0hZoN4m7hP8
 
 npm package:
  
@@ -561,12 +562,19 @@ MeCab는 일본어 형태소 분석기
 
 
 한나눔               :     http://kldp.net/project/hannanum
+
 꼬꼬마 형태소 분석기    : http://kkma.snu.ac.kr
+
 루씬 한글 분석기(아리랑) : http://cafe.naver.com/korlucene
+
 KoNLpy 분석기 : Korean NLP in Python : http://konlpy.org
+
 KLT 분석기 : Korean Language Technology   : http://nlp.kookmin.ac.kr/HAM/kor/
+
 초고속 한국어 형태로 분석기 MACH   :   http://cs.sungshin.ac.kr/~shim/demo/mach.html
+
 KOMORAN 2.0 - 자바 기반의 한국 형태소 분석기 : http://www.shineware.co.kr/?page_id=835
+
 
 기본명령어
 
