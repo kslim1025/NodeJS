@@ -5,6 +5,7 @@
  */
 
 var app = require('../app');
+var fs = require('fs');
 var debug = require('debug')('nodejs-programming:server');
 var http = require('http');
 
@@ -12,14 +13,27 @@ var http = require('http');
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort(process.env.PORT || '52275');
 app.set('port', port);
 
 /**
  * Create HTTP server.
  */
+/*
+http.createServer(function(request, responce){
+    //이미지 파일을 읽습니다.
+    fs.readFile('D:\\ProboScratch3.0\\Scratch3.0_Slink\\images\\scratch-link-1.png',function(error, data){
+        response.writeHead(200, {'Content-Type' : 'image/jpg'});
+        response.end(data);
+    });
+}).listen(52275, function(){
+    console.log('Server Running at http://127.0.0.1:52275');
+});
+*/
+
 
 var server = http.createServer(app);
+
 
 /**
  * Listen on provided port, on all network interfaces.
