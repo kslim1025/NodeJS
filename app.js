@@ -13,6 +13,8 @@ var process = require('./process');
 
 //모듈을 추출합니다.
 var url = require('url');
+//쿼리 스트링을 문자열로 반환하기
+var queryString = require('querystring');
 //모듈을 사용합니다.
 var parseObject = url.parse('https://hanbit.co.kr/store/books/look.php?p_code=B4250257160');
 
@@ -54,5 +56,6 @@ console.log('circleArea(3) = %d', moduleA.circleArea());
 console.log('process time = %d', process.processA(moduleA.abs(-273),0));
 
 console.log(parseObject);
+console.log(queryString.parse(parseObject.query));
 
 module.exports = app;
