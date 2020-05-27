@@ -10,6 +10,7 @@ var usersRouter = require('./routes/users');
 //내가 만든 모듈
 var moduleA = require('./moduleA');
 var process = require('./process');
+var rint = require('./module/EmitterEvent');
 
 //모듈을 추출합니다.
 var url = require('url');
@@ -97,6 +98,11 @@ var fs = require('fs');
 //모듈을 사용합니다.
 fs.readFile('C:\\Users\\ProDesk\\Desktop\\ultraedit250058_64\\123.txt', 'utf8', function(error, data){
     console.log(data);
+});
+
+//이벤트를 연결합니다.
+rint.timer.on('tick', function (code){
+    console.log('이벤트를 실행합니다.');
 });
 
 module.exports = app;
