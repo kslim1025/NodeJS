@@ -7,9 +7,15 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
-//내가 만든 변수
+//내가 만든 모듈
 var moduleA = require('./moduleA');
 var process = require('./process');
+
+//모듈을 추출합니다.
+var url = require('url');
+//모듈을 사용합니다.
+var parseObject = url.parse('https://hanbit.co.kr/store/books/look.php?p_code=B4250257160');
+
 
 var app = express();
 
@@ -46,5 +52,7 @@ console.log('abs(-273) = %d ', moduleA.abs(-273));
 console.log('circleArea(3) = %d', moduleA.circleArea());
 
 console.log('process time = %d', process.processA(moduleA.abs(-273),0));
+
+console.log(parseObject);
 
 module.exports = app;
