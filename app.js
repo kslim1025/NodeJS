@@ -6,7 +6,10 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+
+//내가 만든 변수
 var moduleA = require('./moduleA');
+var process = require('./process');
 
 var app = express();
 
@@ -41,5 +44,7 @@ app.use(function(err, req, res, next) {
 
 console.log('abs(-273) = %d ', moduleA.abs(-273));
 console.log('circleArea(3) = %d', moduleA.circleArea());
+
+console.log('process time = %d', process.processA(moduleA.abs(-273),0));
 
 module.exports = app;
