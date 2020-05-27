@@ -15,7 +15,9 @@ var process = require('./process');
 var url = require('url');
 //쿼리 스트링을 문자열로 반환하기
 var queryString = require('querystring');
-
+//Crypto 암호화 라이브러리
+var crypto = require('crypto');
+//node의 기본적인 모듈을 모아놓은 라이브러리
 var util = require('util');
 //모듈을 사용합니다.
 var parseObject = url.parse('https://hanbit.co.kr/store/books/look.php?p_code=B4250257160');
@@ -61,5 +63,13 @@ console.log(queryString.parse(parseObject.query));
 
 var data = util.format('%d + %d = %d',25,252,25+252);
 console.log(data);
+
+//해시를 생성합니다.
+var shasum = crypto.createHash('sha256');
+shasum.update('crypto_hash');
+var output = shasum.digest('hex');
+
+//출력합니다.
+console.log('crypto_hash: ', output);
 
 module.exports = app;
