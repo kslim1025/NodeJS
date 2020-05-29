@@ -56,8 +56,6 @@ app.use(function(err, req, res, next) {
 });
 
 
-
-
 console.log('abs(-273) = %d ', moduleA.abs(-273));
 console.log('circleArea(3) = %d', moduleA.circleArea());
 
