@@ -1,4 +1,5 @@
 var createError = require('http-errors');
+//express 모듈을 추출합니다.
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
@@ -53,6 +54,9 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+
+
 
 console.log('abs(-273) = %d ', moduleA.abs(-273));
 console.log('circleArea(3) = %d', moduleA.circleArea());
