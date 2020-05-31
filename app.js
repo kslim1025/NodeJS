@@ -4,6 +4,8 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+//mysql 연동
+var mysql = require('mysql');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -102,9 +104,19 @@ fs.readFile('C:\\Users\\ProDesk\\Desktop\\ultraedit250058_64\\123.txt', 'utf8', 
     console.log(data);
 });
 
+var client = mysql.createConnection({
+    user : 'root',
+    password : 'wither10'
+});
+
+//데이터베이스 쿼리를 사용합니다.
+client.query('USE mysql');
+
 //이벤트를 연결합니다.
 rint.timer.on('tick', function (code){
     console.log('이벤트를 실행합니다.');
 });
+
+
 
 module.exports = app;
