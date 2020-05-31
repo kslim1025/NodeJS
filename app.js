@@ -106,11 +106,30 @@ fs.readFile('C:\\Users\\ProDesk\\Desktop\\ultraedit250058_64\\123.txt', 'utf8', 
 
 var client = mysql.createConnection({
     user : 'root',
-    password : 'wither10'
+    password : 'test',
+    database : 'mysql'
 });
 
 //데이터베이스 쿼리를 사용합니다.
 client.query('USE mysql');
+
+client.query('SELECT * FROM products',function(error, result, fields)
+{
+    //예외처리
+    if(error){
+        console.log('쿼리 문장에 오류가 있습니다.');
+    }else{
+        console.log(result);
+    }
+});
+
+//mysql모듈을 사용해 데이터를 입력할 때는? 토큰을 사용할 수 있습니다.
+
+//데이터베이스 쿼리를 실행합니다.
+client.query('INSERT INTO products (name, modelnumber, series) VALUES (?,?,?)', ['Name Value','Model Number Value','Series Value'], function (error, results, fields) {
+    
+});
+
 
 //이벤트를 연결합니다.
 rint.timer.on('tick', function (code){
